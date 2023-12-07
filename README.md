@@ -8,3 +8,9 @@ cd /etc/tor/torrc
 ```
 cat /var/lib/tor/hidden_service/
 ```
+
+
+## utils
+```
+service --status-all
+```
