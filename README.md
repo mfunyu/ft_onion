@@ -2,20 +2,30 @@
 
 ## walkthrough
 
+- build & run
 ```
-cd /etc/tor/torrc
+docker build . -t tor
+docker run -p 8080:80 -p 4000:4242 tor
 ```
+- find tor link
 ```
-cat /var/lib/tor/hidden_service/
+cat /var/lib/tor/hidden_service/hostname
 ```
 
-### Launching tor
+### launch tor
 ```
 cd tor-browser
 ./start-tor-browser.desktop
 ```
 
-## utils
+### connect to ssh
+```
+ssh -p 4000 user@localhost
+# password
+```
+
+
+## Helps
 
 ### inside docker
 ```
@@ -24,11 +34,11 @@ service --status-all
 
 ### docker control
 
-```
-docker build . -t tor
-docker run -p 8080:80 tor
-```
-
+- stop all
 ```
 docker stop $(docker ps -q)
+```
+- delete all
+```
+docker system prune -a
 ```
