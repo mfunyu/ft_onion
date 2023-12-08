@@ -6,7 +6,7 @@ RUN apt-get -y update \
 EXPOSE 80 4242
 
 RUN useradd -m -s /bin/bash user \
-	&& echo "user:pass" | chpasswd
+	&& echo "user:password" | chpasswd
 
 WORKDIR etc
 
