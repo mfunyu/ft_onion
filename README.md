@@ -1,4 +1,4 @@
-# ft_onion - OTP (Cybersecurity)
+# ft_onion - Web (Cybersecurity)
 
 ## walkthrough
 
